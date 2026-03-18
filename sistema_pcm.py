@@ -424,7 +424,42 @@ def gerar_html_lubrificacao(df_imprimir):
     html = f"""<html><head><style>body {{ font-family: Arial, sans-serif; font-size: 12px; }} table {{ width: 100%; border-collapse: collapse; margin-top: 10px; }} th, td {{ border: 1px solid black; padding: 5px; text-align: left; }} th {{ background-color: #f2f2f2; }} .header {{ display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid black; padding-bottom: 10px; margin-bottom: 20px; }}</style></head><body><div class="header"><div>{img_tag}</div><div style="text-align: right;"><h2>ROTA DE LUBRIFICAÇÃO</h2><p>Data de Impressão: {date.today().strftime('%d/%m/%Y')}</p></div></div><table><thead><tr><th style="width: 25%">MÁQUINA</th><th style="width: 35%">PONTO / COMPONENTE</th><th style="width: 25%">LUBRIFICANTE</th><th style="width: 10%">QTD</th><th style="width: 5%">OK</th></tr></thead><tbody>{linhas_html}</tbody></table><br><br><div style="display: flex; justify-content: space-between; margin-top: 30px;"><div style="border-top: 1px solid black; width: 40%; text-align: center;">Técnico Responsável</div><div style="border-top: 1px solid black; width: 40%; text-align: center;">Supervisor</div></div><script>window.print();</script></body></html>"""
     return html
 
+# ==============================================================================
+# --- FUNÇÃO DE SALVAMENTO PARA BYPASS DE CONFLITOS ---
+# ==============================================================================
+def salvar_os_confirmada(os_d, solucao, tecnicos_sel, dt_ini, dt_fim, pecas_com_qtd, obs_maq, pendencia_txt, tipo_prob):
+    tecnicos_nomes = ", ".join(tecnicos_sel)
+    dur = (dt_fim - dt_ini).total_seconds() / 3600
+    pecas_str = ", ".join(pecas_com_qtd) if pecas_com_qtd else None
+    status_pend = "ABERTA" if pendencia_txt else None
+    tipo_final = tipo_prob if tipo_prob else "NÃO SE APLICA"
+    
+    dados_atualizados = os_d.to_dict()
+    dados_atualizados.update({
+        'Status': 'FECHADA',
+        'Solucao': solucao,
+        'Tecnico': tecnicos_nomes,
+        'Horas_Totais': round(dur, 2),
+        'Pecas_Trocadas': pecas_str,
+        'Observacao_Maq': obs_maq,
+        'Data_Inicio': dt_ini.date(),
+        'Data_Fim': dt_fim.date(),
+        'Data_Inicio_Hora': dt_ini.time().strftime("%H:%M:%S"),
+        'Data_Fim_Hora': dt_fim.time().strftime("%H:%M:%S"),
+        'Pendencia': pendencia_txt,
+        'Status_Pendencia': status_pend,
+        'Tipo_Problema': tipo_final
+    })
+    
+    if salvar_unica_linha_supabase(dados_atualizados):
+        st.success("Ordem finalizada com sucesso!")
+        import time
+        time.sleep(2)
+        st.rerun()
+
+# ==============================================================================
 # --- APP PRINCIPAL ---
+# ==============================================================================
 configurar_estilo_visual()
 df = carregar_dados()
 
@@ -436,7 +471,7 @@ with st.sidebar:
     st.markdown("### 🔐 Acesso")
     senha = st.text_input("Digite a senha para editar:", type="password")
     
-    # SENHA DO SISTEMA (Você pode mudar "adf2026" para o que quiser)
+    # SENHA DO SISTEMA
     if senha == "adf2026":
         st.success("Modo Administrador Liberado")
         itens_menu = [
@@ -456,6 +491,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("**PCM - ADF Ondulados**")
     st.caption("Nuvem Ativa (Supabase)")
+
 
 # ==============================================================================
 # 1. EMITIR ORDEM
@@ -502,7 +538,8 @@ if menu == "Emitir Ordem":
 elif menu == "Baixar Ordem":
     st.title("Baixa Técnica")
     abertas = df[df['Status'] == 'ABERTA']
-    if abertas.empty: st.info("Nenhuma ordem pendente.")
+    if abertas.empty: 
+        st.info("Nenhuma ordem pendente.")
     else:
         sel = st.selectbox("Selecione a Ordem", abertas['ID'].astype(str) + " - " + abertas['Maquina'])
         idx_selecionado = int(sel.split(" - ")[0])
@@ -518,73 +555,65 @@ elif menu == "Baixar Ordem":
             st.caption("Informe a quantidade:")
             cols_p = st.columns(len(pecas_selecionadas))
             for i, peca in enumerate(pecas_selecionadas):
-                with cols_p[i if i < 4 else 0]:
+                with cols_p[i % 4]: 
                     qtd = st.number_input(f"Qtd {peca}", min_value=1, value=1, key=f"qtd_os_{peca}")
                     pecas_com_qtd_os.append(f"{peca} ({qtd}un)")
         
-        with st.form("baixa"):
-            tipo_prob = st.selectbox("Classificação do Problema", LISTA_TIPOS_PROBLEMA, index=None, placeholder="Selecione caso haja defeito...")
-            solucao = st.text_area("Solução Aplicada")
-            obs_maq = st.text_area("Observação da Máquina")
+        tipo_prob = st.selectbox("Classificação do Problema", LISTA_TIPOS_PROBLEMA, index=None, placeholder="Selecione caso haja defeito...")
+        solucao = st.text_area("Solução Aplicada")
+        obs_maq = st.text_area("Observação da Máquina")
+        
+        st.markdown("---")
+        pendencia_txt = st.text_area("Registrar Pendência (Se houver algo por fazer)", placeholder="Descreva o que ficou pendente na máquina...")
+        st.markdown("### Lançamento de Horas e Técnicos")
+        tecnicos_sel = st.multiselect("Técnicos Executantes", LISTA_TECNICOS)
+        c1, c2, c3, c4 = st.columns(4)
+        d_ini = c1.date_input("Data Início", date.today(), format="DD/MM/YYYY")
+        h_ini = c2.time_input("Hora Início", value=datetime.strptime("08:00", "%H:%M").time())
+        d_fim = c3.date_input("Data Fim", date.today(), format="DD/MM/YYYY")
+        h_fim = c4.time_input("Hora Fim", value=datetime.strptime("17:00", "%H:%M").time())
+
+        # ==========================================
+        # LÓGICA REATIVA (Verifica na hora que digita)
+        # ==========================================
+        dt_ini_novo = datetime.combine(d_ini, h_ini)
+        dt_fim_novo = datetime.combine(d_fim, h_fim)
+        
+        tipo_manut_atual = str(os_d['Tipo_Manutencao']).upper()
+        eh_corretiva = "CORRETIVA" in tipo_manut_atual
+
+        # Trava os botões se faltar informação básica
+        bloqueio = False
+        if not tecnicos_sel: 
+            st.info("⚠️ Selecione pelo menos um técnico para habilitar a finalização.")
+            bloqueio = True
+        elif eh_corretiva and not tipo_prob:
+            st.info("⚠️ Para Ordens CORRETIVAS, é obrigatório selecionar a Classificação do Problema.")
+            bloqueio = True
+        elif dt_fim_novo < dt_ini_novo:
+            st.error("🚨 Erro: A Data/Hora Fim não pode ser menor que o Início.")
+            bloqueio = True
+            
+        # Se os dados básicos estiverem ok, ele checa os conflitos do banco
+        if not bloqueio:
+            conflitos_tec = verificar_conflito_horario(df, tecnicos_sel, dt_ini_novo, dt_fim_novo)
+            conflitos_maq = verificar_conflito_maquina(df, os_d['Maquina'], dt_ini_novo, dt_fim_novo)
+            
+            tem_conflito = bool(conflitos_tec or conflitos_maq)
             
             st.markdown("---")
-            pendencia_txt = st.text_area("Registrar Pendência (Se houver algo por fazer)", placeholder="Descreva o que ficou pendente na máquina...")
-            st.markdown("### Lançamento de Horas e Técnicos")
-            tecnicos_sel = st.multiselect("Técnicos Executantes", LISTA_TECNICOS)
-            c1, c2, c3, c4 = st.columns(4)
-            d_ini = c1.date_input("Data Início", date.today(), format="DD/MM/YYYY")
-            h_ini = c2.time_input("Hora Início", value=datetime.strptime("08:00", "%H:%M").time())
-            d_fim = c3.date_input("Data Fim", date.today(), format="DD/MM/YYYY")
-            h_fim = c4.time_input("Hora Fim", value=datetime.strptime("17:00", "%H:%M").time())
-            
-            if st.form_submit_button("FINALIZAR ORDEM (DIGITAL)"):
-                tipo_manut_atual = str(os_d['Tipo_Manutencao']).upper()
-                eh_corretiva = "CORRETIVA" in tipo_manut_atual
+            if tem_conflito:
+                st.warning("⚠️ CONFLITO DE HORÁRIO DETECTADO:")
+                for c in conflitos_tec: st.write(f"- {c}")
+                for c in conflitos_maq: st.write(f"- {c}")
                 
-                if not tecnicos_sel: st.error("Selecione pelo menos um técnico.")
-                elif eh_corretiva and not tipo_prob:
-                    st.error("Para Ordens CORRETIVAS, é obrigatório selecionar a Classificação do Problema.")
-                else:
-                    dt_ini = datetime.combine(d_ini, h_ini)
-                    dt_fim = datetime.combine(d_fim, h_fim)
-                    if dt_fim < dt_ini: st.error("Erro: Data Fim menor que Início.")
-                    else:
-                        conflitos_tec = verificar_conflito_horario(df, tecnicos_sel, dt_ini, dt_fim)
-                        conflitos_maq = verificar_conflito_maquina(df, os_d['Maquina'], dt_ini, dt_fim)
-                        
-                        if conflitos_tec or conflitos_maq:
-                            for c in conflitos_tec: st.error(f"Erro: {c}")
-                            for c in conflitos_maq: st.error(f"Erro: {c}")
-                            st.warning("Não foi possível finalizar devido aos conflitos.")
-                        else:
-                            tecnicos_nomes = ", ".join(tecnicos_sel)
-                            dur = (dt_fim - dt_ini).total_seconds() / 3600
-                            pecas_str = ", ".join(pecas_com_qtd_os) if pecas_com_qtd_os else None
-                            status_pend = "ABERTA" if pendencia_txt else None
-                            tipo_final = tipo_prob if tipo_prob else "NÃO SE APLICA"
-                            
-                            dados_atualizados = os_d.to_dict()
-                            dados_atualizados.update({
-                                'Status': 'FECHADA',
-                                'Solucao': solucao,
-                                'Tecnico': tecnicos_nomes,
-                                'Horas_Totais': round(dur, 2),
-                                'Pecas_Trocadas': pecas_str,
-                                'Observacao_Maq': obs_maq,
-                                'Data_Inicio': d_ini,
-                                'Data_Fim': d_fim,
-                                'Data_Inicio_Hora': h_ini.strftime("%H:%M:%S"),
-                                'Data_Fim_Hora': h_fim.strftime("%H:%M:%S"),
-                                'Pendencia': pendencia_txt,
-                                'Status_Pendencia': status_pend,
-                                'Tipo_Problema': tipo_final
-                            })
-                            
-                            if salvar_unica_linha_supabase(dados_atualizados):
-                                st.success("Ordem finalizada e salva na nuvem!")
-                                import time
-                                time.sleep(2)
-                                st.rerun()
+                # Se tiver conflito, muda a cor e a mensagem do botão
+                if st.button("✅ IGNORAR AVISO E SALVAR MESMO ASSIM"):
+                    salvar_os_confirmada(os_d, solucao, tecnicos_sel, dt_ini_novo, dt_fim_novo, pecas_com_qtd_os, obs_maq, pendencia_txt, tipo_prob)
+            else:
+                # Sem conflitos, botão normal
+                if st.button("FINALIZAR ORDEM"):
+                    salvar_os_confirmada(os_d, solucao, tecnicos_sel, dt_ini_novo, dt_fim_novo, pecas_com_qtd_os, obs_maq, pendencia_txt, tipo_prob)
 
 # ==============================================================================
 # 3. DASHBOARD
@@ -633,9 +662,7 @@ elif menu == "Dashboard":
         st.markdown("---")
         st.subheader("Indicadores de Confiabilidade (Apenas Máquina de Papel)")
         
-        # Filtra os dados exclusivamente para a Máquina de Papel
         df_mp = df_dash[df_dash['Maquina'] == 'MÁQUINA DE PAPEL']
-        # Considera apenas corretivas emergenciais para MTBF/MTTR da Máquina de Papel
         df_corretivas_mp = df_mp[df_mp['Tipo_Manutencao'] == 'CORRETIVA EMERGENCIAL']
         
         qtd_falhas = len(df_corretivas_mp)
@@ -643,7 +670,6 @@ elif menu == "Dashboard":
         
         mttr = horas_reparo_total / qtd_falhas if qtd_falhas > 0 else 0
         
-        # Calcula os dias do período
         if dt_inicio_filtro:
             dias_periodo = max(1, (dt_fim_filtro - dt_inicio_filtro).days + 1)
         else:
@@ -654,7 +680,6 @@ elif menu == "Dashboard":
             else:
                 dias_periodo = 1
                 
-        # Tempo disponível de 1 máquina trabalhando 24h por dia
         tempo_disponivel_total = dias_periodo * 24
         tempo_operacional = tempo_disponivel_total - horas_reparo_total
         
@@ -667,7 +692,6 @@ elif menu == "Dashboard":
         else:
             cm1.metric("MTBF (Máquina de Papel)", f"Sem falhas ({tempo_operacional:.0f}h disp.)")
             cm2.metric("MTTR (Máquina de Papel)", "0.0 Horas")
-        # ------------------------------
 
         st.markdown("---")
         g1 = df_dash.groupby(['Maquina', 'Tipo_Manutencao']).size().reset_index(name='Qtd')
@@ -740,7 +764,6 @@ elif menu == "Imprimir Ordem":
 elif menu == "Gerenciar Registros":
     st.title("Gerenciamento de Banco de Dados")
     
-    # --- NOVO: CADASTRAR PEÇA NA NUVEM ---
     with st.expander("Cadastrar Nova Peça no Sistema", expanded=False):
         with st.form("form_nova_peca", clear_on_submit=True):
             nova_peca = st.text_input("Nome da Nova Peça (Ex: ROLAMENTO 6204)").upper().strip()
@@ -806,7 +829,7 @@ elif menu == "Histórico de Peças":
         st.caption("Informe a quantidade para cada peça selecionada:")
         cols = st.columns(len(p_man))
         for i, peca in enumerate(p_man):
-            with cols[i if i < 4 else 0]:
+            with cols[i % 4]: 
                 qtd = st.number_input(f"Qtd {peca}", min_value=1, value=1, key=f"qtd_{peca}")
                 pecas_com_qtd.append(f"{peca} ({qtd}un)")
     
@@ -908,7 +931,6 @@ elif menu == "Controle de Lubrificação":
             st.markdown(f"**Itens Listados:** {len(view)}")
             check_all = st.checkbox("SELECIONAR TODOS OS ITENS LISTADOS ACIMA PARA BAIXA")
             
-            # Usamos o ID real do banco agora para a chave
             view['ID_TEMP'] = view.index
             opts = view.apply(lambda x: f"{x.get('ATIVO')} - {x.get('SUBATIVO')}", axis=1)
             sels = st.multiselect("Ou selecione manualmente:", opts.index, format_func=lambda i: opts[i])
@@ -923,13 +945,8 @@ elif menu == "Controle de Lubrificação":
                 else:
                     with st.spinner("Registrando baixas na nuvem..."):
                         for i in itens_para_baixa:
-                            # Converte a linha específica em dicionário
                             linha_atualizada = df_lub.loc[i].to_dict()
-                            
-                            # Atualiza a data
                             linha_atualizada['ULTIMA (DATA)'] = str(dt_real)
-                            
-                            # Envia apenas essa máquina específica para o Supabase
                             salvar_linha_lubrificacao_supabase(linha_atualizada)
                             
                     st.success(f"Baixa realizada em {len(itens_para_baixa)} itens na Nuvem!")
