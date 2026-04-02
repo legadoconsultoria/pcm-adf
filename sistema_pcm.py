@@ -926,16 +926,28 @@ elif menu == "Controle de Lubrificação":
         c2.metric("Hoje", len(df_lub[df_lub['STATUS'].str.contains("Hoje")]))
         c3.metric("Total", len(df_lub))
         
-        c_f1, c_f2, c_f3 = st.columns(3)
+       # Divide o layout em 4 colunas em vez de 3
+        c_f1, c_f2, c_f3, c_f4 = st.columns(4)
         stat = c_f1.multiselect("Status", ["Vencida", "Hoje", "No Prazo"], default=["Vencida", "Hoje"])
         maq = c_f2.multiselect("Máquina", df_lub['ATIVO'].unique())
         subs_unicos = sorted(list(set(df_lub['SUBATIVO'].dropna().astype(str).unique())))
         sub = c_f3.multiselect("Componente (Subativo)", subs_unicos)
         
+        # --- NOVA LÓGICA DO FILTRO 'TIPO' ---
+        # Detecta a coluna 'tipo' (maiúscula ou minúscula) e cria o filtro na 4ª coluna
+        col_tipo = 'tipo' if 'tipo' in df_lub.columns else 'TIPO' if 'TIPO' in df_lub.columns else None
+        if col_tipo:
+            tipos_unicos = sorted(list(set(df_lub[col_tipo].dropna().astype(str).unique())))
+            tipo_sel = c_f4.multiselect("Tipo", tipos_unicos)
+        else:
+            tipo_sel = []
+        
         view = df_lub.copy()
+        # Aplica os filtros
         if stat: view = view[view['STATUS'].isin(stat)]
         if maq: view = view[view['ATIVO'].isin(maq)]
         if sub: view = view[view['SUBATIVO'].isin(sub)]
+        if col_tipo and tipo_sel: view = view[view[col_tipo].isin(tipo_sel)]
         
         if not view.empty:
             if st.button("IMPRIMIR ROTA"):
@@ -947,7 +959,12 @@ elif menu == "Controle de Lubrificação":
             if "Hoje" in v: return 'color: orange; font-weight: bold'
             return 'color: green'
             
-        vd = view[['ATIVO','SUBATIVO','LUBRIFICANTE','STATUS','PRÓXIMA (DATA)']].copy()
+        # Monta as colunas da tabela inserindo o 'Tipo' se ele existir no banco
+        cols_visualizar = ['ATIVO', 'SUBATIVO']
+        if col_tipo: cols_visualizar.append(col_tipo)
+        cols_visualizar.extend(['LUBRIFICANTE', 'STATUS', 'PRÓXIMA (DATA)'])
+        
+        vd = view[cols_visualizar].copy()
         vd['PRÓXIMA (DATA)'] = vd['PRÓXIMA (DATA)'].apply(formatar_data_br)
         st.dataframe(vd.style.map(cor, subset=['STATUS']))
         
