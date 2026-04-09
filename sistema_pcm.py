@@ -21,7 +21,7 @@ NOMES_POSSIVEIS_ESTOQUE = ['estoque_lubrificantes.csv', 'estoque_lubrificantes.c
 # --- 📝 LISTAS DE CADASTRO PADRÃO ---
 # ==============================================================================
 
-LISTA_MAQUINAS = ["FILTRO DOS MOTORES MP","ESTEIRA DE ALIMENTAÇÃO DO HIDRAPULPER","CALDEIRA NOVA","CALDEIRA VELHA","HIDRAPULPER 1","DESCONTAMINADOR","BOMBA DE MASSA O HIDRAPULPER 1","CCM 1 (PREPARO DE MASSA)","TRANSFORMADOR 1 (PREPARO DE MASSA)","BOMBA DE ÁGUA DO DESCONTAMINADOR","REFINADOR 1","PENEIRA VIBRATÓRIA","TURBO SEPARADOR","DEPURADOR PRIMÁRIO (DPI)","DEPURADOR HR 12 (FINE SCREEN-1° ESTÁGIO)","DEPURADOR HR 18 (FINE SCREEN-2° ESTÁGIO)","DEPURADOR HR 24 (FINE SCREEN-3° ESTÁGIO)","BOMBA DE ÁGUA DE  DILUIÇÃO DO HR 18","BOMBA DE ÁGUA DE  DILUIÇÃO DO HR 12","1° ESTÁGIO DE CLEANER","2° ESTÁGIO DE CLEANER","BOMBA DE MASSA DO 2° ESTÁGIO DE CLEANER","SIDE HILL 1","SIDE HILL 2","PENEIRA ESTÁTICA DO REJEITO DO HR 12","TM 1 (TANQUE DE MASSA)","TM 2 (TANQUE DE MASSA)","TM 3 (TANQUE DE MASSA)","TM 4 (TANQUE DE MASSA)","TA 1 (TANQUE DE ÁGUA)","TA 2 (TANQUE DE ÁGUA)","AGITADOR DO TM 1","AGITADOR DO TM 2","AGITADOR DO TM 3","AGITADOR DO TM 4","CLEANER DE ALTA CONSISTÊNCIA (HD)","BOMBA DE ÁGUA DO POÇO ARTESIANO","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 1","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 2","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 3","BOMDA DE ÁGUA DE ALIMENTAÇÃO DO PREPARO DE MASSA","BOMBA DE MASSA DO 1° ESTÁGIO DO CLEANER","BOMBA DE ÁGUA DE DILUIÇÃO DO FINE SCREEN","BOMBA DE ÁGUA DE LIMPEZA","BOMBA DE ÁGUA DE ELUTRIAÇÃO DOS CLEANERS","BOMBA DE ÁGUA DO HIDRAPULPER 2/SILO","BOMBA DE ÁGUA DO CONTROLE DE CONSISTÊNCIA","BOMBA DE MASSA DO TANQUE 2 (REFINADOR)","BOMBA DE MASSA DE TRANSBORDO CANALETA 1","BOMBA DE MASSA DE TRANSBORDO CANALETA 2","BOMBA DE MASSA DO TM 1","BOMBA DE MASSA DO TM 3","BOMBA DE MASSA DO TM 4 (GRAMATURA)","ROSCA DE REJEITO DE AREIA","BOMBA DO SEPARADOR DE VÁCUO PK","BOMBA DE VÁCUO 1 (MESA PLANA)","BOMBA DE VÁCUO 2 (ROLO DE SUCÇÃO)","BOMBA DE VÁCUO 3 (FELTRO)","BOMBA DE VÁCUO 4 (FELTRO)","MÁQUINA DE PAPEL","UNIDADE HIDRÁULICA DAS PRENSAS","VENTILADOR DE BAIXO VÁCUO (ROLO PICADO)","EXAUSTOR DO FILTRO DE MANGA","CCM 2 (MÁQUINA DE PAPEL)","QGBT","TRANSFORMADOR 2","COMPRESSOR DE PARAFUSO 1","COMPRESSOR DE PARAFUSO 2","PICADOR DE REFILE DA REBOBINADEIRA","BOMBA DE MISTURA","BOMBA DE SELAGEM DO VÁCUO","EXAUSTOR DE BAIXO VÁCUO DA MESA","DEPURADOR CABEÇA DE MÁQUINA (HR 24)","BOMBA DO WIREPIT","BOMBA DO COUCHPIT","AGITADOR DO COUCHPIT","ATENUADOR DE PULSAÇÃO","CAIXA DE ENTRADA DA MESA PLANA","CHUVEIRO OSCILADOR","ROLO CABECEIRA","ROLO DE SUCÇÃO","ROLO ACIONADOR","ROLO RASPADOR","1° PRENSA","2° PRENSA","CHUVEIRO OSCILADOR DO FILTRO TANDEM","CHUVEIRO OSCILADOR DA 1° PRENSA","CHUVEIRO OSCILADOR DA 2° PRENSA","ROLO PICKUP","CILINDRO SECADOR BABY","ESTICADOR DE CORDA DO 1° GRUPO","RASPAS DST 1","RASPAS DST 2","RASPAS DST 3","ESTICADOR DE CORDA DO 2° GRUPO","ESTICADOR DE CORDA DO 3° GRUPO","UNIDADE HIDRÁULICA DA SECAGEM","TANQUE SEPARADOR DO CONDENSADO DO 1° GRUPO","BOMBA DO BICO DE CORTE","BOMBA DO CHUVEIRO OSCILADOR","CAVALETE DE CONTROLE DO 1° GRUPO","CAVALETE DE CONTROLE DO 2° GRUPO","CAVALETE DE CONTROLE DO 3° GRUPO","COLETOR DE DISTRIBUIÇÃO DE VAPOR","ENROLADEIRA","MONOVIA","HIDRAPULPER 2","BOMBA DE MASSA DO HIDRAPULPER 2","FILTRO SEPARADOR DE REFILE","CORTADOR DE TUBETE","DESENROLADEIRA","REBOBINADEIRA","LAVA BOTAS","BALANÇA 1","BALANÇA RODOVIÁRIA","ROTA DE INSPEÇÃO 1", "ROTA DE INSPEÇÃO 2", "ROTA DE INSPEÇÃO 3", "ROTA DE INSPEÇÃO 4","ROTA DE INSPEÇÃO 5", "ROTA DE INSPEÇÃO 6", "ROTA DE INSPEÇÃO 7", "ROTA DE INSPEÇÃO 8","ROTA DE INSPEÇÃO 9","ROTA DE INSPEÇÃO 10", "ROTA DE INSPEÇÃO 11", "ROTA DE INSPEÇÃO 12","ROTA DE LUBRIFICAÇÃO","UTILIDADES","ONDULADEIRA","ROTA DE INSPEÇÃO DOS PAINÉIS","INSPEÇÃO VISUAL","SETOR MANUTENÇÃO","SETOR ONDULADEIRA","SETOR PREPARO DE MASSA","SETOR PÁTIO","ROTA DE INSPEÇÃO 13d"]
+LISTA_MAQUINAS = ["SUBSTAÇÃO","CCM CALDEIRA NOVA","CCM ONDULADEIRA","PAINEL DA SLYTER","PAINEL DE DISTRIBUIÇÃO","FILTRO DOS MOTORES MP","ESTEIRA DE ALIMENTAÇÃO DO HIDRAPULPER","CALDEIRA NOVA","CALDEIRA VELHA","HIDRAPULPER 1","DESCONTAMINADOR","BOMBA DE MASSA O HIDRAPULPER 1","CCM 1 (PREPARO DE MASSA)","TRANSFORMADOR 1 (PREPARO DE MASSA)","BOMBA DE ÁGUA DO DESCONTAMINADOR","REFINADOR 1","PENEIRA VIBRATÓRIA","TURBO SEPARADOR","DEPURADOR PRIMÁRIO (DPI)","DEPURADOR HR 12 (FINE SCREEN-1° ESTÁGIO)","DEPURADOR HR 18 (FINE SCREEN-2° ESTÁGIO)","DEPURADOR HR 24 (FINE SCREEN-3° ESTÁGIO)","BOMBA DE ÁGUA DE  DILUIÇÃO DO HR 18","BOMBA DE ÁGUA DE  DILUIÇÃO DO HR 12","1° ESTÁGIO DE CLEANER","2° ESTÁGIO DE CLEANER","BOMBA DE MASSA DO 2° ESTÁGIO DE CLEANER","SIDE HILL 1","SIDE HILL 2","PENEIRA ESTÁTICA DO REJEITO DO HR 12","TM 1 (TANQUE DE MASSA)","TM 2 (TANQUE DE MASSA)","TM 3 (TANQUE DE MASSA)","TM 4 (TANQUE DE MASSA)","TA 1 (TANQUE DE ÁGUA)","TA 2 (TANQUE DE ÁGUA)","AGITADOR DO TM 1","AGITADOR DO TM 2","AGITADOR DO TM 3","AGITADOR DO TM 4","CLEANER DE ALTA CONSISTÊNCIA (HD)","BOMBA DE ÁGUA DO POÇO ARTESIANO","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 1","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 2","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 3","BOMDA DE ÁGUA DE ALIMENTAÇÃO DO PREPARO DE MASSA","BOMBA DE MASSA DO 1° ESTÁGIO DO CLEANER","BOMBA DE ÁGUA DE DILUIÇÃO DO FINE SCREEN","BOMBA DE ÁGUA DE LIMPEZA","BOMBA DE ÁGUA DE ELUTRIAÇÃO DOS CLEANERS","BOMBA DE ÁGUA DO HIDRAPULPER 2/SILO","BOMBA DE ÁGUA DO CONTROLE DE CONSISTÊNCIA","BOMBA DE MASSA DO TANQUE 2 (REFINADOR)","BOMBA DE MASSA DE TRANSBORDO CANALETA 1","BOMBA DE MASSA DE TRANSBORDO CANALETA 2","BOMBA DE MASSA DO TM 1","BOMBA DE MASSA DO TM 3","BOMBA DE MASSA DO TM 4 (GRAMATURA)","ROSCA DE REJEITO DE AREIA","BOMBA DO SEPARADOR DE VÁCUO PK","BOMBA DE VÁCUO 1 (MESA PLANA)","BOMBA DE VÁCUO 2 (ROLO DE SUCÇÃO)","BOMBA DE VÁCUO 3 (FELTRO)","BOMBA DE VÁCUO 4 (FELTRO)","MÁQUINA DE PAPEL","UNIDADE HIDRÁULICA DAS PRENSAS","VENTILADOR DE BAIXO VÁCUO (ROLO PICADO)","EXAUSTOR DO FILTRO DE MANGA","CCM 2 (MÁQUINA DE PAPEL)","QGBT","TRANSFORMADOR 2","COMPRESSOR DE PARAFUSO 1","COMPRESSOR DE PARAFUSO 2","PICADOR DE REFILE DA REBOBINADEIRA","BOMBA DE MISTURA","BOMBA DE SELAGEM DO VÁCUO","EXAUSTOR DE BAIXO VÁCUO DA MESA","DEPURADOR CABEÇA DE MÁQUINA (HR 24)","BOMBA DO WIREPIT","BOMBA DO COUCHPIT","AGITADOR DO COUCHPIT","ATENUADOR DE PULSAÇÃO","CAIXA DE ENTRADA DA MESA PLANA","CHUVEIRO OSCILADOR","ROLO CABECEIRA","ROLO DE SUCÇÃO","ROLO ACIONADOR","ROLO RASPADOR","1° PRENSA","2° PRENSA","CHUVEIRO OSCILADOR DO FILTRO TANDEM","CHUVEIRO OSCILADOR DA 1° PRENSA","CHUVEIRO OSCILADOR DA 2° PRENSA","ROLO PICKUP","CILINDRO SECADOR BABY","ESTICADOR DE CORDA DO 1° GRUPO","RASPAS DST 1","RASPAS DST 2","RASPAS DST 3","ESTICADOR DE CORDA DO 2° GRUPO","ESTICADOR DE CORDA DO 3° GRUPO","UNIDADE HIDRÁULICA DA SECAGEM","TANQUE SEPARADOR DO CONDENSADO DO 1° GRUPO","BOMBA DO BICO DE CORTE","BOMBA DO CHUVEIRO OSCILADOR","CAVALETE DE CONTROLE DO 1° GRUPO","CAVALETE DE CONTROLE DO 2° GRUPO","CAVALETE DE CONTROLE DO 3° GRUPO","COLETOR DE DISTRIBUIÇÃO DE VAPOR","ENROLADEIRA","MONOVIA","HIDRAPULPER 2","BOMBA DE MASSA DO HIDRAPULPER 2","FILTRO SEPARADOR DE REFILE","CORTADOR DE TUBETE","DESENROLADEIRA","REBOBINADEIRA","LAVA BOTAS","BALANÇA 1","BALANÇA RODOVIÁRIA","ROTA DE INSPEÇÃO 1", "ROTA DE INSPEÇÃO 2", "ROTA DE INSPEÇÃO 3", "ROTA DE INSPEÇÃO 4","ROTA DE INSPEÇÃO 5", "ROTA DE INSPEÇÃO 6", "ROTA DE INSPEÇÃO 7", "ROTA DE INSPEÇÃO 8","ROTA DE INSPEÇÃO 9","ROTA DE INSPEÇÃO 10", "ROTA DE INSPEÇÃO 11", "ROTA DE INSPEÇÃO 12","ROTA DE LUBRIFICAÇÃO","UTILIDADES","ONDULADEIRA","ROTA DE INSPEÇÃO DOS PAINÉIS","INSPEÇÃO VISUAL","SETOR MANUTENÇÃO","SETOR ONDULADEIRA","SETOR PREPARO DE MASSA","SETOR PÁTIO","ROTA DE INSPEÇÃO 13d"]
 LISTA_SETORES = ["MECÂNICA", "ELÉTRICA", "PREDIAL", "UTILIDADES"]
 LISTA_TIPOS_MANUTENCAO = ["PREVENTIVA", "CORRETIVA EMERGENCIAL", "MANUTENÇÃO PLANEJADA", "PREDITIVA", "MELHORIA", "LUBRIFICAÇÃO"]
 LISTA_TIPOS_PROBLEMA = ["SENSOR EM FALHA","POLIA/ENGRENAGEM FORA DO LUGAR","CONJUNTO MECÂNICO TRAVADO","MECÂNICO", "ELÉTRICO", "HIDRÁULICO", "PNEUMÁTICO", "OPERACIONAL", "LUBRIFICAÇÃO", "INSTRUMENTAÇÃO", "ESTRUTURAL", "OUTROS", "VAZAMENTO DE ÁGUA/MASSA", "VAZAMENTO DE AR", "VAZAMENTO DE ÓLEO", "QUEBRA DE ROLAMENTO", "ROMPIMENTO DE CORREIA", "QUEBRA DE ENGRENAGEM OU POLIA", "SELAMENTO","FUSIVEL/DISJUNTOR QUEIMADO","QUEBRA DE MANCAL/BUCHA", "QUEIMA DE MOTOR/BOMBA","DESALINHAMENTO","PARAFUSOS SOLTOS/QUEBRADOS","OBSTRUÇÃO POR CORPO ESTRANHO","VEDAÇÕES/VÁLVULAS COM PROBLEMA","PROBLEMA NO PORTÃO DE ENTRADA","MOTOR DESARMADO","SISTEMA ELÉTRICO EM FALHA","CORRENTE/CORREIA FORA DO LUGAR","PROBLEMA NO REDUTOR","SUBSTITUIÇÃO DE PEÇA POR DESGASTE"]
@@ -163,7 +163,35 @@ def salvar_nova_peca_supabase(nome_peca):
     except Exception as e:
         st.error(f"Erro ao salvar peça na nuvem: {e}")
         return False
+# ==============================================================================
+# --- ☁️ FUNÇÕES SUPABASE (CADASTRO DE PREVENTIVAS) ---
+# ==============================================================================
+def carregar_preventivas():
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/cadastro_preventivas?select=*"
+        headers = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}
+        response = requests.get(url, headers=headers)
+        if response.status_code == 200:
+            dados = response.json()
+            return pd.DataFrame(dados) if dados else pd.DataFrame(columns=['id', 'maquina', 'nome_preventiva', 'periodicidade_dias'])
+        return pd.DataFrame(columns=['id', 'maquina', 'nome_preventiva', 'periodicidade_dias'])
+    except:
+        return pd.DataFrame(columns=['id', 'maquina', 'nome_preventiva', 'periodicidade_dias'])
 
+def salvar_preventiva_supabase(maquina, nome, dias):
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/cadastro_preventivas"
+        headers = {
+            "apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json"
+        }
+        payload = [{"maquina": maquina, "nome_preventiva": nome, "periodicidade_dias": dias}]
+        response = requests.post(url, headers=headers, json=payload)
+        response.raise_for_status()
+        return True
+    except Exception as e:
+        st.error(f"Erro ao salvar preventiva: {e}")
+        return False
 # ==============================================================================
 # --- ☁️ FUNÇÕES SUPABASE (LUBRIFICAÇÃO) ---
 # ==============================================================================
@@ -477,12 +505,14 @@ with st.sidebar:
         itens_menu = [
             "Emitir Ordem", "Baixar Ordem", "Dashboard", "Imprimir Ordem", 
             "Gerenciar Registros", "Histórico de Peças", "Controle de Lubrificação",
-            "OS Pendentes", "Pendências de Máquinas"
+            "OS Pendentes", "Pendências de Máquinas","Status Preventivas"
         ]
     else:
         st.info("Modo Apenas Leitura")
         itens_menu = [
-            "Emitir Ordem", "Dashboard", "Imprimir Ordem", "OS Pendentes"
+            "Emitir Ordem", "Baixar Ordem", "Dashboard", "Imprimir Ordem", 
+            "Gerenciar Registros", "Histórico de Peças", "Controle de Lubrificação",
+            "OS Pendentes", "Pendências de Máquinas","Status Preventivas"
         ]
 
     st.markdown("---")
@@ -498,34 +528,75 @@ with st.sidebar:
 # ==============================================================================
 if menu == "Emitir Ordem":
     st.title("Nova Ordem de Serviço")
+    
+    # Carrega as preventivas da nuvem para o dropdown
+    df_prevs_cadastradas = carregar_preventivas()
+    lista_nomes_prev = []
+    if not df_prevs_cadastradas.empty:
+        lista_nomes_prev = df_prevs_cadastradas['nome_preventiva'].unique().tolist()
+    
     with st.form("form_abertura"):
         col1, col2, col3 = st.columns(3)
         if not df.empty:
             proximo_id = int(df['ID'].max()) + 1
         else:
             proximo_id = 1
+            
         c1 = col1.metric("Número da Ordem", f"#{proximo_id}")
         data_emissao = col1.date_input("Data da Emissão", date.today(), format="DD/MM/YYYY")
         maquina = col2.selectbox("Máquina", LISTA_MAQUINAS)
         setor = col2.selectbox("Setor", LISTA_SETORES)
         responsavel = col3.selectbox("Responsável", LISTA_TECNICOS)
         tipo_manut = col3.selectbox("Tipo", LISTA_TIPOS_MANUTENCAO)
+        
+        # --- NOVO CAMPO: Vínculo Direto com a Preventiva ---
+        nome_preventiva_vinculada = None
+        if tipo_manut == "PREVENTIVA":
+            st.markdown("---")
+            st.markdown("#### 🔄 Vínculo de Manutenção Preventiva")
+            if lista_nomes_prev:
+                nome_preventiva_vinculada = st.selectbox(
+                    "Qual preventiva será executada?", 
+                    ["Selecione a preventiva..."] + lista_nomes_prev
+                )
+            else:
+                st.warning("Nenhuma preventiva cadastrada no sistema. Cadastre na aba 'Status Preventivas'.")
+                nome_preventiva_vinculada = "Selecione a preventiva..."
+            st.markdown("---")
+        
         descricao = st.text_area("Descrição do Serviço", height=100)
         
         btn_enviar = st.form_submit_button("EMITIR ORDEM DE SERVIÇO")
         
         if btn_enviar:
+            bloqueio_emissao = False
+            
             if not descricao:
                 st.warning("Preencha a descrição do problema.")
-            else:
+                bloqueio_emissao = True
+            
+            # Validação para garantir que selecionou a preventiva correta
+            if tipo_manut == "PREVENTIVA" and nome_preventiva_vinculada == "Selecione a preventiva...":
+                st.error("Para emitir uma OS Preventiva, você DEVE selecionar qual é a preventiva na lista.")
+                bloqueio_emissao = True
+                
+            if not bloqueio_emissao:
+                # Se for preventiva, forçamos o nome exato na descrição (ou em um campo oculto se preferir)
+                # Vamos colocar no início da descrição para ficar registrado no histórico e o sistema ler depois
+                if tipo_manut == "PREVENTIVA" and nome_preventiva_vinculada:
+                    descricao_final = f"[VÍNCULO: {nome_preventiva_vinculada}] - {descricao}"
+                else:
+                    descricao_final = descricao
+
                 nova_os = {
                     "ID": proximo_id, "Data_Emissao": data_emissao, "Maquina": maquina, "Responsavel": responsavel,
-                    "Tipo_Manutencao": tipo_manut, "Setor": setor, "Descricao_Pedido": descricao, "Status": "ABERTA",
+                    "Tipo_Manutencao": tipo_manut, "Setor": setor, "Descricao_Pedido": descricao_final, "Status": "ABERTA",
                     "Diagnostico": None, "Solucao": None, "Pecas_Trocadas": None, "Observacao_Maq": None, "Tecnico": None, 
                     "Data_Inicio": None, "Data_Fim": None, "Horas_Totais": 0.0,
                     "Data_Inicio_Hora": None, "Data_Fim_Hora": None,
                     "Pendencia": None, "Status_Pendencia": None, "Tipo_Problema": None
                 }
+                
                 if salvar_unica_linha_supabase(nova_os):
                     st.success(f"OS #{proximo_id} enviada com sucesso para a nuvem!")
                     import time
@@ -1020,7 +1091,112 @@ elif menu == "OS Pendentes":
                 tb = ost[['ID', 'Data_Emissao', 'Maquina', 'Tipo_Manutencao', 'Descricao_Pedido']].copy()
                 tb['Data_Emissao'] = tb['Data_Emissao'].apply(formatar_data_br)
                 st.table(tb)
+# ==============================================================================
+# 10. STATUS DE PREVENTIVAS
+# ==============================================================================
+elif menu == "Status Preventivas":
+    st.title("Controle e Status de Preventivas")
+    
+    # --- FORMULÁRIO DE CADASTRO ---
+    with st.expander("➕ Cadastrar Novo Tipo de Preventiva", expanded=False):
+        with st.form("form_nova_prev", clear_on_submit=True):
+            st.info("💡 Este cadastro cria o nome que aparecerá no menu na hora de Emitir a OS.")
+            c1, c2, c3 = st.columns([2, 3, 1])
+            m_prev = c1.selectbox("Máquina Principal (Apenas Referência)", LISTA_MAQUINAS)
+            n_prev = c2.text_input("Nome da Preventiva (Ex: Troca de Óleo Geral)")
+            d_prev = c3.number_input("Periodicidade (Dias)", min_value=1, value=30)
 
+            if st.form_submit_button("SALVAR PREVENTIVA"):
+                if n_prev:
+                    if salvar_preventiva_supabase(m_prev, n_prev.strip().upper(), d_prev):
+                        st.success("Preventiva cadastrada com sucesso!")
+                        import time
+                        time.sleep(1)
+                        st.rerun()
+                else:
+                    st.warning("Preencha o nome da preventiva.")
+
+    st.markdown("---")
+    
+    # --- ANÁLISE DE STATUS ---
+    df_prevs = carregar_preventivas()
+
+    if df_prevs.empty:
+        st.warning("Nenhuma preventiva cadastrada no sistema. Use o formulário acima para começar.")
+    else:
+        # Filtra apenas Ordens FECHADAS que sejam PREVENTIVAS
+        df_fechadas = df[(df['Status'] == 'FECHADA') & (df['Tipo_Manutencao'] == 'PREVENTIVA')].copy()
+        
+        resultados = []
+        hoje = date.today()
+
+        for _, p in df_prevs.iterrows():
+            maq_ref = p['maquina']
+            nome = str(p['nome_preventiva']).strip().upper()
+            dias = int(p['periodicidade_dias'])
+            
+            tag_busca = f"[VÍNCULO: {nome}]"
+
+            # NOVA LÓGICA: Procura qualquer OS FECHADA cuja descrição contenha a TAG da preventiva
+            execucoes = df_fechadas[
+                df_fechadas['Descricao_Pedido'].astype(str).str.contains(tag_busca, regex=False, na=False)
+            ].copy()
+
+            if execucoes.empty:
+                ultima_data = None
+                status = "Atrasada (Nunca Executada)"
+            else:
+                execucoes['Data_Fim'] = pd.to_datetime(execucoes['Data_Fim'], errors='coerce').dt.date
+                ultima_data = execucoes['Data_Fim'].dropna().max()
+                
+                if pd.isna(ultima_data):
+                    status = "Atrasada (Erro de Data)"
+                else:
+                    prox_data = ultima_data + timedelta(days=dias)
+                    diff = (prox_data - hoje).days
+                    
+                    if diff < 0:
+                        status = "Atrasada"
+                    elif diff <= 5:
+                        status = "Vencendo"
+                    else:
+                        status = "No Prazo"
+
+            resultados.append({
+                "MÁQUINA REF.": maq_ref,
+                "PREVENTIVA": nome,
+                "PERÍODO (DIAS)": dias,
+                "ÚLTIMA BAIXA": formatar_data_br(ultima_data) if ultima_data else "-",
+                "PRÓXIMA (DATA)": formatar_data_br(ultima_data + timedelta(days=dias)) if ultima_data else "-",
+                "STATUS": status
+            })
+
+        df_status = pd.DataFrame(resultados)
+
+        # Dashboard Rápido Superior
+        c_st1, c_st2, c_st3 = st.columns(3)
+        c_st1.metric("Total Cadastradas", len(df_status))
+        c_st2.metric("No Prazo", len(df_status[df_status['STATUS'] == 'No Prazo']))
+        c_st3.metric("Atrasadas / Vencendo", len(df_status[df_status['STATUS'].str.contains("Atrasada|Vencendo")]))
+
+        st.markdown("### Tabela de Acompanhamento")
+        
+        # Filtro Rápido na Tela
+        filtro_status = st.multiselect("Filtrar por Status", ["Atrasada", "Vencendo", "No Prazo", "Atrasada (Nunca Executada)"], default=["Atrasada", "Atrasada (Nunca Executada)", "Vencendo"])
+        if filtro_status:
+            df_status = df_status[df_status['STATUS'].isin(filtro_status)]
+
+        # Função de cor para a tabela
+        def cor_status_prev(val):
+            if "Atrasada" in val: return 'color: white; background-color: #ff4b4b; font-weight: bold'
+            if "Vencendo" in val: return 'color: black; background-color: #ffc107; font-weight: bold'
+            return 'color: white; background-color: #00cc96'
+
+        st.dataframe(
+            df_status.style.map(cor_status_prev, subset=['STATUS']), 
+            use_container_width=True, 
+            hide_index=True
+        )
 # ==============================================================================
 # 9. PENDÊNCIAS DE MÁQUINAS
 # ==============================================================================
