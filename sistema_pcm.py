@@ -510,8 +510,7 @@ with st.sidebar:
     else:
         st.info("Modo Apenas Leitura")
         itens_menu = [
-            "Emitir Ordem", "Baixar Ordem", "Dashboard", "Imprimir Ordem", 
-            "Gerenciar Registros", "Histórico de Peças", "Controle de Lubrificação",
+            "Emitir Ordem", "Dashboard", "Imprimir Ordem",
             "OS Pendentes", "Pendências de Máquinas","Status Preventivas"
         ]
 
