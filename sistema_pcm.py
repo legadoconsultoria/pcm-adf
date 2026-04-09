@@ -500,7 +500,7 @@ with st.sidebar:
     senha = st.text_input("Digite a senha para editar:", type="password")
     
     # SENHA DO SISTEMA
-    if senha == "adf2026":
+    if senha == "111":
         st.success("Modo Administrador Liberado")
         itens_menu = [
             "Emitir Ordem", "Baixar Ordem", "Dashboard", "Imprimir Ordem", 
