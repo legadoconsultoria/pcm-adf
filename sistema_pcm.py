@@ -518,7 +518,7 @@ with st.sidebar:
     menu = st.radio("NAVEGAÇÃO", itens_menu)
     
     st.markdown("---")
-    st.markdown("**PCM - ADF Ondulados**")
+    st.markdown("**PCM - EMERSON**")
     st.caption("Nuvem Ativa (Supabase)")
 
 
