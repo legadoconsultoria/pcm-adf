@@ -11,7 +11,7 @@ SUPABASE_URL = "https://dgitrtndyisotaowpsch.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRnaXRydG5keWlzb3Rhb3dwc2NoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE1MTU0MTQsImV4cCI6MjA4NzA5MTQxNH0.-EjzxfPhyVSsErcstOt8D2nITVxmC3wFoXQTbYtqn1o"
 
 # --- CONFIGURAÇÃO INICIAL ---
-st.set_page_config(page_title="PCM - ADF Ondulados", layout="wide")
+st.set_page_config(page_title="PCM EMERSON", layout="wide")
 
 # --- ARQUIVOS LOCAIS RESTANTES ---
 NOME_ARQUIVO_LOGO = 'logo.png' 
