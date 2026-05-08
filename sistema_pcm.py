@@ -11,7 +11,7 @@ SUPABASE_URL = "https://dgitrtndyisotaowpsch.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRnaXRydG5keWlzb3Rhb3dwc2NoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE1MTU0MTQsImV4cCI6MjA4NzA5MTQxNH0.-EjzxfPhyVSsErcstOt8D2nITVxmC3wFoXQTbYtqn1o"
 
 # --- CONFIGURAÇÃO INICIAL ---
-st.set_page_config(page_title="PCM EMERSON", layout="wide")
+st.set_page_config(page_title="PCM - ADF Ondulados", layout="wide")
 
 # --- ARQUIVOS LOCAIS RESTANTES ---
 NOME_ARQUIVO_LOGO = 'logo.png' 
@@ -21,11 +21,11 @@ NOMES_POSSIVEIS_ESTOQUE = ['estoque_lubrificantes.csv', 'estoque_lubrificantes.c
 # --- 📝 LISTAS DE CADASTRO PADRÃO ---
 # ==============================================================================
 
-LISTA_MAQUINAS = ["MOTORES","SUBSTAÇÃO","CCM CALDEIRA NOVA","CCM ONDULADEIRA","PAINEL DA SLYTER","PAINEL DE DISTRIBUIÇÃO","FILTRO DOS MOTORES MP","ESTEIRA DE ALIMENTAÇÃO DO HIDRAPULPER","CALDEIRA NOVA","CALDEIRA VELHA","HIDRAPULPER 1","DESCONTAMINADOR","BOMBA DE MASSA O HIDRAPULPER 1","CCM 1 (PREPARO DE MASSA)","TRANSFORMADOR 1 (PREPARO DE MASSA)","BOMBA DE ÁGUA DO DESCONTAMINADOR","REFINADOR 1","PENEIRA VIBRATÓRIA","TURBO SEPARADOR","DEPURADOR PRIMÁRIO (DPI)","DEPURADOR HR 12 (FINE SCREEN-1° ESTÁGIO)","DEPURADOR HR 18 (FINE SCREEN-2° ESTÁGIO)","DEPURADOR HR 24 (FINE SCREEN-3° ESTÁGIO)","BOMBA DE ÁGUA DE  DILUIÇÃO DO HR 18","BOMBA DE ÁGUA DE  DILUIÇÃO DO HR 12","1° ESTÁGIO DE CLEANER","2° ESTÁGIO DE CLEANER","BOMBA DE MASSA DO 2° ESTÁGIO DE CLEANER","SIDE HILL 1","SIDE HILL 2","PENEIRA ESTÁTICA DO REJEITO DO HR 12","TM 1 (TANQUE DE MASSA)","TM 2 (TANQUE DE MASSA)","TM 3 (TANQUE DE MASSA)","TM 4 (TANQUE DE MASSA)","TA 1 (TANQUE DE ÁGUA)","TA 2 (TANQUE DE ÁGUA)","AGITADOR DO TM 1","AGITADOR DO TM 2","AGITADOR DO TM 3","AGITADOR DO TM 4","CLEANER DE ALTA CONSISTÊNCIA (HD)","BOMBA DE ÁGUA DO POÇO ARTESIANO","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 1","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 2","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 3","BOMDA DE ÁGUA DE ALIMENTAÇÃO DO PREPARO DE MASSA","BOMBA DE MASSA DO 1° ESTÁGIO DO CLEANER","BOMBA DE ÁGUA DE DILUIÇÃO DO FINE SCREEN","BOMBA DE ÁGUA DE LIMPEZA","BOMBA DE ÁGUA DE ELUTRIAÇÃO DOS CLEANERS","BOMBA DE ÁGUA DO HIDRAPULPER 2/SILO","BOMBA DE ÁGUA DO CONTROLE DE CONSISTÊNCIA","BOMBA DE MASSA DO TANQUE 2 (REFINADOR)","BOMBA DE MASSA DE TRANSBORDO CANALETA 1","BOMBA DE MASSA DE TRANSBORDO CANALETA 2","BOMBA DE MASSA DO TM 1","BOMBA DE MASSA DO TM 3","BOMBA DE MASSA DO TM 4 (GRAMATURA)","ROSCA DE REJEITO DE AREIA","BOMBA DO SEPARADOR DE VÁCUO PK","BOMBA DE VÁCUO 1 (MESA PLANA)","BOMBA DE VÁCUO 2 (ROLO DE SUCÇÃO)","BOMBA DE VÁCUO 3 (FELTRO)","BOMBA DE VÁCUO 4 (FELTRO)","MÁQUINA DE PAPEL","UNIDADE HIDRÁULICA DAS PRENSAS","VENTILADOR DE BAIXO VÁCUO (ROLO PICADO)","EXAUSTOR DO FILTRO DE MANGA","CCM 2 (MÁQUINA DE PAPEL)","QGBT","TRANSFORMADOR 2","COMPRESSOR DE PARAFUSO 1","COMPRESSOR DE PARAFUSO 2","PICADOR DE REFILE DA REBOBINADEIRA","BOMBA DE MISTURA","BOMBA DE SELAGEM DO VÁCUO","EXAUSTOR DE BAIXO VÁCUO DA MESA","DEPURADOR CABEÇA DE MÁQUINA (HR 24)","BOMBA DO WIREPIT","BOMBA DO COUCHPIT","AGITADOR DO COUCHPIT","ATENUADOR DE PULSAÇÃO","CAIXA DE ENTRADA DA MESA PLANA","CHUVEIRO OSCILADOR","ROLO CABECEIRA","ROLO DE SUCÇÃO","ROLO ACIONADOR","ROLO RASPADOR","1° PRENSA","2° PRENSA","CHUVEIRO OSCILADOR DO FILTRO TANDEM","CHUVEIRO OSCILADOR DA 1° PRENSA","CHUVEIRO OSCILADOR DA 2° PRENSA","ROLO PICKUP","CILINDRO SECADOR BABY","ESTICADOR DE CORDA DO 1° GRUPO","RASPAS DST 1","RASPAS DST 2","RASPAS DST 3","ESTICADOR DE CORDA DO 2° GRUPO","ESTICADOR DE CORDA DO 3° GRUPO","UNIDADE HIDRÁULICA DA SECAGEM","TANQUE SEPARADOR DO CONDENSADO DO 1° GRUPO","BOMBA DO BICO DE CORTE","BOMBA DO CHUVEIRO OSCILADOR","CAVALETE DE CONTROLE DO 1° GRUPO","CAVALETE DE CONTROLE DO 2° GRUPO","CAVALETE DE CONTROLE DO 3° GRUPO","COLETOR DE DISTRIBUIÇÃO DE VAPOR","ENROLADEIRA","MONOVIA","HIDRAPULPER 2","BOMBA DE MASSA DO HIDRAPULPER 2","FILTRO SEPARADOR DE REFILE","CORTADOR DE TUBETE","DESENROLADEIRA","REBOBINADEIRA","LAVA BOTAS","BALANÇA 1","BALANÇA RODOVIÁRIA","ROTA DE INSPEÇÃO 1", "ROTA DE INSPEÇÃO 2", "ROTA DE INSPEÇÃO 3", "ROTA DE INSPEÇÃO 4","ROTA DE INSPEÇÃO 5", "ROTA DE INSPEÇÃO 6", "ROTA DE INSPEÇÃO 7", "ROTA DE INSPEÇÃO 8","ROTA DE INSPEÇÃO 9","ROTA DE INSPEÇÃO 10", "ROTA DE INSPEÇÃO 11", "ROTA DE INSPEÇÃO 12","ROTA DE LUBRIFICAÇÃO","UTILIDADES","ONDULADEIRA","ROTA DE INSPEÇÃO DOS PAINÉIS","INSPEÇÃO VISUAL","SETOR MANUTENÇÃO","SETOR ONDULADEIRA","SETOR PREPARO DE MASSA","SETOR PÁTIO","ROTA DE INSPEÇÃO 13d"]
+LISTA_MAQUINAS = ["SUBSTAÇÃO","CCM CALDEIRA NOVA","CCM ONDULADEIRA","PAINEL DA SLYTER","PAINEL DE DISTRIBUIÇÃO","FILTRO DOS MOTORES MP","ESTEIRA DE ALIMENTAÇÃO DO HIDRAPULPER","CALDEIRA NOVA","CALDEIRA VELHA","HIDRAPULPER 1","DESCONTAMINADOR","BOMBA DE MASSA O HIDRAPULPER 1","CCM 1 (PREPARO DE MASSA)","TRANSFORMADOR 1 (PREPARO DE MASSA)","BOMBA DE ÁGUA DO DESCONTAMINADOR","REFINADOR 1","PENEIRA VIBRATÓRIA","TURBO SEPARADOR","DEPURADOR PRIMÁRIO (DPI)","DEPURADOR HR 12 (FINE SCREEN-1° ESTÁGIO)","DEPURADOR HR 18 (FINE SCREEN-2° ESTÁGIO)","DEPURADOR HR 24 (FINE SCREEN-3° ESTÁGIO)","BOMBA DE ÁGUA DE  DILUIÇÃO DO HR 18","BOMBA DE ÁGUA DE  DILUIÇÃO DO HR 12","1° ESTÁGIO DE CLEANER","2° ESTÁGIO DE CLEANER","BOMBA DE MASSA DO 2° ESTÁGIO DE CLEANER","SIDE HILL 1","SIDE HILL 2","PENEIRA ESTÁTICA DO REJEITO DO HR 12","TM 1 (TANQUE DE MASSA)","TM 2 (TANQUE DE MASSA)","TM 3 (TANQUE DE MASSA)","TM 4 (TANQUE DE MASSA)","TA 1 (TANQUE DE ÁGUA)","TA 2 (TANQUE DE ÁGUA)","AGITADOR DO TM 1","AGITADOR DO TM 2","AGITADOR DO TM 3","AGITADOR DO TM 4","CLEANER DE ALTA CONSISTÊNCIA (HD)","BOMBA DE ÁGUA DO POÇO ARTESIANO","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 1","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 2","BOMBA DE ÁGUA DE COMBATE A INCÊNDIO 3","BOMDA DE ÁGUA DE ALIMENTAÇÃO DO PREPARO DE MASSA","BOMBA DE MASSA DO 1° ESTÁGIO DO CLEANER","BOMBA DE ÁGUA DE DILUIÇÃO DO FINE SCREEN","BOMBA DE ÁGUA DE LIMPEZA","BOMBA DE ÁGUA DE ELUTRIAÇÃO DOS CLEANERS","BOMBA DE ÁGUA DO HIDRAPULPER 2/SILO","BOMBA DE ÁGUA DO CONTROLE DE CONSISTÊNCIA","BOMBA DE MASSA DO TANQUE 2 (REFINADOR)","BOMBA DE MASSA DE TRANSBORDO CANALETA 1","BOMBA DE MASSA DE TRANSBORDO CANALETA 2","BOMBA DE MASSA DO TM 1","BOMBA DE MASSA DO TM 3","BOMBA DE MASSA DO TM 4 (GRAMATURA)","ROSCA DE REJEITO DE AREIA","BOMBA DO SEPARADOR DE VÁCUO PK","BOMBA DE VÁCUO 1 (MESA PLANA)","BOMBA DE VÁCUO 2 (ROLO DE SUCÇÃO)","BOMBA DE VÁCUO 3 (FELTRO)","BOMBA DE VÁCUO 4 (FELTRO)","MÁQUINA DE PAPEL","UNIDADE HIDRÁULICA DAS PRENSAS","VENTILADOR DE BAIXO VÁCUO (ROLO PICADO)","EXAUSTOR DO FILTRO DE MANGA","CCM 2 (MÁQUINA DE PAPEL)","QGBT","TRANSFORMADOR 2","COMPRESSOR DE PARAFUSO 1","COMPRESSOR DE PARAFUSO 2","PICADOR DE REFILE DA REBOBINADEIRA","BOMBA DE MISTURA","BOMBA DE SELAGEM DO VÁCUO","EXAUSTOR DE BAIXO VÁCUO DA MESA","DEPURADOR CABEÇA DE MÁQUINA (HR 24)","BOMBA DO WIREPIT","BOMBA DO COUCHPIT","AGITADOR DO COUCHPIT","ATENUADOR DE PULSAÇÃO","CAIXA DE ENTRADA DA MESA PLANA","CHUVEIRO OSCILADOR","ROLO CABECEIRA","ROLO DE SUCÇÃO","ROLO ACIONADOR","ROLO RASPADOR","1° PRENSA","2° PRENSA","CHUVEIRO OSCILADOR DO FILTRO TANDEM","CHUVEIRO OSCILADOR DA 1° PRENSA","CHUVEIRO OSCILADOR DA 2° PRENSA","ROLO PICKUP","CILINDRO SECADOR BABY","ESTICADOR DE CORDA DO 1° GRUPO","RASPAS DST 1","RASPAS DST 2","RASPAS DST 3","ESTICADOR DE CORDA DO 2° GRUPO","ESTICADOR DE CORDA DO 3° GRUPO","UNIDADE HIDRÁULICA DA SECAGEM","TANQUE SEPARADOR DO CONDENSADO DO 1° GRUPO","BOMBA DO BICO DE CORTE","BOMBA DO CHUVEIRO OSCILADOR","CAVALETE DE CONTROLE DO 1° GRUPO","CAVALETE DE CONTROLE DO 2° GRUPO","CAVALETE DE CONTROLE DO 3° GRUPO","COLETOR DE DISTRIBUIÇÃO DE VAPOR","ENROLADEIRA","MONOVIA","HIDRAPULPER 2","BOMBA DE MASSA DO HIDRAPULPER 2","FILTRO SEPARADOR DE REFILE","CORTADOR DE TUBETE","DESENROLADEIRA","REBOBINADEIRA","LAVA BOTAS","BALANÇA 1","BALANÇA RODOVIÁRIA","ROTA DE INSPEÇÃO 1", "ROTA DE INSPEÇÃO 2", "ROTA DE INSPEÇÃO 3", "ROTA DE INSPEÇÃO 4","ROTA DE INSPEÇÃO 5", "ROTA DE INSPEÇÃO 6", "ROTA DE INSPEÇÃO 7", "ROTA DE INSPEÇÃO 8","ROTA DE INSPEÇÃO 9","ROTA DE INSPEÇÃO 10", "ROTA DE INSPEÇÃO 11", "ROTA DE INSPEÇÃO 12","ROTA DE LUBRIFICAÇÃO","UTILIDADES","ONDULADEIRA","ROTA DE INSPEÇÃO DOS PAINÉIS","INSPEÇÃO VISUAL","SETOR MANUTENÇÃO","SETOR ONDULADEIRA","SETOR PREPARO DE MASSA","SETOR PÁTIO","ROTA DE INSPEÇÃO 13d"]
 LISTA_SETORES = ["MECÂNICA", "ELÉTRICA", "PREDIAL", "UTILIDADES"]
 LISTA_TIPOS_MANUTENCAO = ["PREVENTIVA", "CORRETIVA EMERGENCIAL", "MANUTENÇÃO PLANEJADA", "PREDITIVA", "MELHORIA", "LUBRIFICAÇÃO"]
 LISTA_TIPOS_PROBLEMA = ["SENSOR EM FALHA","POLIA/ENGRENAGEM FORA DO LUGAR","CONJUNTO MECÂNICO TRAVADO","MECÂNICO", "ELÉTRICO", "HIDRÁULICO", "PNEUMÁTICO", "OPERACIONAL", "LUBRIFICAÇÃO", "INSTRUMENTAÇÃO", "ESTRUTURAL", "OUTROS", "VAZAMENTO DE ÁGUA/MASSA", "VAZAMENTO DE AR", "VAZAMENTO DE ÓLEO", "QUEBRA DE ROLAMENTO", "ROMPIMENTO DE CORREIA", "QUEBRA DE ENGRENAGEM OU POLIA", "SELAMENTO","FUSIVEL/DISJUNTOR QUEIMADO","QUEBRA DE MANCAL/BUCHA", "QUEIMA DE MOTOR/BOMBA","DESALINHAMENTO","PARAFUSOS SOLTOS/QUEBRADOS","OBSTRUÇÃO POR CORPO ESTRANHO","VEDAÇÕES/VÁLVULAS COM PROBLEMA","PROBLEMA NO PORTÃO DE ENTRADA","MOTOR DESARMADO","SISTEMA ELÉTRICO EM FALHA","CORRENTE/CORREIA FORA DO LUGAR","PROBLEMA NO REDUTOR","SUBSTITUIÇÃO DE PEÇA POR DESGASTE"]
-LISTA_TECNICOS = ["MARCOS", "LUAN", "ISRAEL", "ANDERSON", "JGA", "IVAN", "DIEYSON", "GILMAR","LUCAS","FERNANDO","ANDERSON STURN","GIOVANI"]
+LISTA_TECNICOS = ["MARCOS", "LUAN", "ISRAEL", "ANDERSON", "JGA", "IVAN", "DIEYSON", "GILMAR","LUCAS","FERNANDO","ANDERSON STURN","GIOVANI","KRAFT","LSA","JMI","PERETO","MAYCON"]
 
 # --- LÓGICA DE LISTA DE PEÇAS DA NUVEM ---
 LISTA_PECAS_SUGESTAO_PADRAO = [
@@ -500,25 +500,26 @@ with st.sidebar:
     senha = st.text_input("Digite a senha para editar:", type="password")
     
     # SENHA DO SISTEMA
-    if senha == "111":
+    if senha == "adf2026":
         st.success("Modo Administrador Liberado")
         itens_menu = [
             "Emitir Ordem", "Baixar Ordem", "Dashboard", "Imprimir Ordem", 
             "Gerenciar Registros", "Histórico de Peças", "Controle de Lubrificação",
-            "OS Pendentes", "Pendências de Máquinas","Status Preventivas"
+            "OS Pendentes", "Pendências de Máquinas","Status Preventivas","Programação"
         ]
     else:
         st.info("Modo Apenas Leitura")
         itens_menu = [
-            "Emitir Ordem", "Dashboard", "Imprimir Ordem",
-            "OS Pendentes", "Pendências de Máquinas","Status Preventivas"
+            "Emitir Ordem", "Baixar Ordem", "Dashboard", "Imprimir Ordem", 
+            "Gerenciar Registros", "Histórico de Peças", "Controle de Lubrificação",
+            "OS Pendentes", "Pendências de Máquinas","Status Preventivas","Programação"
         ]
 
     st.markdown("---")
     menu = st.radio("NAVEGAÇÃO", itens_menu)
     
     st.markdown("---")
-    st.markdown("**PCM - EMERSON**")
+    st.markdown("**PCM - ADF Ondulados**")
     st.caption("Nuvem Ativa (Supabase)")
 
 
@@ -1260,3 +1261,189 @@ elif menu == "Pendências de Máquinas":
                         st.divider()
     else:
         st.info("Nenhuma pendência registrada ainda.")
+
+# ==============================================================================
+# 10. PROGRAMAÇÃO DE ATIVIDADES (VERSÃO COM EDIÇÃO E NUVEM)
+# ==============================================================================
+elif menu == "Programação":
+    st.title("Programação de Atividades")
+
+    # --- FUNÇÕES DE CONEXÃO SUPABASE ---
+    def carregar_prog_supabase():
+        try:
+            url = f"{SUPABASE_URL}/rest/v1/programacao?select=*"
+            headers = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}
+            res = requests.get(url, headers=headers)
+            if res.status_code == 200 and res.json():
+                return pd.DataFrame(res.json())
+            return pd.DataFrame(columns=['id', 'atividade', 'tecnicos', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim'])
+        except:
+            return pd.DataFrame(columns=['id', 'atividade', 'tecnicos', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim'])
+
+    def salvar_prog_supabase(dados):
+        try:
+            url = f"{SUPABASE_URL}/rest/v1/programacao"
+            headers = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}", "Content-Type": "application/json"}
+            res = requests.post(url, headers=headers, json=[dados])
+            res.raise_for_status()
+            return True
+        except Exception as e:
+            st.error(f"Erro ao salvar: {e}"); return False
+
+    def atualizar_prog_supabase(id_edit, dados):
+        try:
+            url = f"{SUPABASE_URL}/rest/v1/programacao?id=eq.{id_edit}"
+            headers = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}", "Content-Type": "application/json"}
+            res = requests.patch(url, headers=headers, json=dados)
+            res.raise_for_status()
+            return True
+        except Exception as e:
+            st.error(f"Erro ao atualizar: {e}"); return False
+
+    def excluir_prog_supabase(id_excluir):
+        try:
+            url = f"{SUPABASE_URL}/rest/v1/programacao?id=eq.{id_excluir}"
+            headers = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}
+            requests.delete(url, headers=headers)
+            return True
+        except: return False
+
+    df_prog = carregar_prog_supabase()
+
+    # --- LÓGICA DE ESTADO PARA EDIÇÃO ---
+    if 'id_editando_prog' not in st.session_state:
+        st.session_state['id_editando_prog'] = None
+
+    id_edicao = st.session_state['id_editando_prog']
+    dados_pre_preenchidos = None
+    
+    if id_edicao:
+        # Busca os dados da linha que queremos editar
+        item_edicao = df_prog[df_prog['id'] == id_edicao]
+        if not item_edicao.empty:
+            dados_pre_preenchidos = item_edicao.iloc[0].to_dict()
+            st.warning(f"📝 Você está editando a atividade ID #{id_edicao}")
+            if st.button("❌ Cancelar Edição"):
+                st.session_state['id_editando_prog'] = None
+                st.rerun()
+
+    # --- LÓGICA DE CONFLITO ---
+    if st.session_state.get('alerta_conflito_prog'):
+        st.warning("⚠️ **CONFLITO DETECTADO:**")
+        for msg in st.session_state['msg_conflito']: st.write(f"- {msg}")
+        c1, c2 = st.columns(2)
+        if c1.button("✅ Sim, salvar mesmo assim"):
+            nova_linha = st.session_state['dados_nova_prog']
+            if id_edicao:
+                sucesso = atualizar_prog_supabase(id_edicao, nova_linha)
+            else:
+                sucesso = salvar_prog_supabase(nova_linha)
+            
+            if sucesso:
+                st.session_state['alerta_conflito_prog'] = False
+                st.session_state['id_editando_prog'] = None
+                st.success("Salvo com sucesso!"); import time; time.sleep(1); st.rerun()
+        if c2.button("❌ Não, cancelar"):
+            st.session_state['alerta_conflito_prog'] = False; st.rerun()
+        st.stop()
+
+    # --- FORMULÁRIO (DINÂMICO PARA NOVO OU EDIÇÃO) ---
+    with st.form("form_programacao"):
+        st.subheader("Dados do Agendamento")
+        
+        # Preenchimento automático se for edição
+        val_ativid = dados_pre_preenchidos['atividade'] if dados_pre_preenchidos else ""
+        
+        # Para os técnicos, precisamos converter a string "NOME, NOME" em lista
+        if dados_pre_preenchidos and dados_pre_preenchidos['tecnicos']:
+            val_tecs = str(dados_pre_preenchidos['tecnicos']).split(", ")
+        else:
+            val_tecs = []
+
+        if dados_pre_preenchidos:
+            val_d_ini = datetime.strptime(dados_pre_preenchidos['data_inicio'], "%Y-%m-%d").date()
+            val_h_ini = datetime.strptime(dados_pre_preenchidos['hora_inicio'], "%H:%M:%S").time()
+            val_d_fim = datetime.strptime(dados_pre_preenchidos['data_fim'], "%Y-%m-%d").date()
+            val_h_fim = datetime.strptime(dados_pre_preenchidos['hora_fim'], "%H:%M:%S").time()
+        else:
+            val_d_ini, val_d_fim = date.today(), date.today()
+            val_h_ini = datetime.strptime("08:00", "%H:%M").time()
+            val_h_fim = datetime.strptime("10:00", "%H:%M").time()
+
+        atividade = st.text_area("Atividade", value=val_ativid)
+        tecnicos_sel = st.multiselect("Técnicos", LISTA_TECNICOS, default=val_tecs)
+
+        col1, col2, col3, col4 = st.columns(4)
+        d_ini = col1.date_input("Data Início", val_d_ini, format="DD/MM/YYYY")
+        h_ini = col2.time_input("Hora Início", value=val_h_ini)
+        d_fim = col3.date_input("Data Fim", val_d_fim, format="DD/MM/YYYY")
+        h_fim = col4.time_input("Hora Fim", value=val_h_fim)
+
+        texto_botao = "SALVAR ALTERAÇÕES" if id_edicao else "AGENDAR ATIVIDADE"
+        submit_prog = st.form_submit_button(texto_botao, type="primary", use_container_width=True)
+
+        if submit_prog:
+            if not atividade or not tecnicos_sel:
+                st.warning("Preencha todos os campos.")
+            else:
+                dt_ini_novo = datetime.combine(d_ini, h_ini)
+                dt_fim_novo = datetime.combine(d_fim, h_fim)
+
+                if dt_fim_novo <= dt_ini_novo:
+                    st.error("🚨 Horário inválido.")
+                else:
+                    # Checagem de conflitos (ignora a própria atividade se for edição)
+                    conflitos = []
+                    for _, row in df_prog.iterrows():
+                        if id_edicao and int(row['id']) == int(id_edicao): continue
+                        try:
+                            d_i = datetime.combine(pd.to_datetime(row['data_inicio']).date(), datetime.strptime(str(row['hora_inicio']), "%H:%M:%S").time())
+                            d_f = datetime.combine(pd.to_datetime(row['data_fim']).date(), datetime.strptime(str(row['hora_fim']), "%H:%M:%S").time())
+                            if (dt_ini_novo < d_f) and (dt_fim_novo > d_i):
+                                t_ex = str(row['tecnicos']).split(', ')
+                                comum = set(tecnicos_sel).intersection(t_ex)
+                                if comum:
+                                    for t in comum: conflitos.append(f"{t} ocupado em '{row['atividade']}'")
+                        except: continue
+
+                    dados_novos = {
+                        'atividade': atividade, 'tecnicos': ", ".join(tecnicos_sel),
+                        'data_inicio': str(d_ini), 'hora_inicio': str(h_ini),
+                        'data_fim': str(d_fim), 'hora_fim': str(h_fim)
+                    }
+
+                    if conflitos:
+                        st.session_state['alerta_conflito_prog'] = True
+                        st.session_state['msg_conflito'] = conflitos
+                        st.session_state['dados_nova_prog'] = dados_novos
+                        st.rerun()
+                    else:
+                        if id_edicao:
+                            res = atualizar_prog_supabase(id_edicao, dados_novos)
+                        else:
+                            res = salvar_prog_supabase(dados_novos)
+                        
+                        if res:
+                            st.session_state['id_editando_prog'] = None
+                            st.success("Sucesso!"); import time; time.sleep(1); st.rerun()
+
+    # --- LISTAGEM ---
+    st.markdown("---")
+    st.subheader("📅 Atividades Programadas")
+    if df_prog.empty:
+        st.info("Nada programado.")
+    else:
+        df_p = df_prog.copy().sort_values(by=['data_inicio', 'hora_inicio'])
+        for _, row in df_p.iterrows():
+            with st.container(border=True):
+                c1, c2, c3 = st.columns([4, 1, 1])
+                with c1:
+                    st.markdown(f"**{row['atividade']}**")
+                    st.caption(f"🔧 {row['tecnicos']} | 🕒 {formatar_data_br(row['data_inicio'])} {row['hora_inicio']} até {formatar_data_br(row['data_fim'])} {row['hora_fim']}")
+                with c2:
+                    if st.button("📝 Editar", key=f"edit_{row['id']}", use_container_width=True):
+                        st.session_state['id_editando_prog'] = row['id']
+                        st.rerun()
+                with c3:
+                    if st.button("🗑️", key=f"del_{row['id']}", use_container_width=True, type="secondary"):
+                        if excluir_prog_supabase(row['id']): st.rerun()
