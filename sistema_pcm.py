@@ -1,14 +1,4 @@
 import streamlit as st
-st.markdown("""
-    <style>
-        [data-testid="stSidebar"] {
-            background-color: #262730 !important;
-        }
-        [data-testid="stSidebarNav"] span {
-            color: #FAFAFA !important;
-        }
-    </style>
-""", unsafe_allow_html=True)
 import pandas as pd
 import plotly.express as px
 import base64
