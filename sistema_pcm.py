@@ -1,17 +1,4 @@
 import streamlit as st
-st.markdown("""
-    <style>
-        /* Fundo escuro */
-        [data-testid="stSidebar"] {
-            background-color: #262730 !important;
-        }
-        
-        /* O asterisco agora pega TUDO dentro da barra lateral (títulos, links, botões) */
-        [data-testid="stSidebar"] * {
-            color: #FAFAFA !important;
-        }
-    </style>
-""", unsafe_allow_html=True)
 import pandas as pd
 import plotly.express as px
 import base64
