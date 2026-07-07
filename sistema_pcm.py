@@ -327,22 +327,24 @@ def verificar_conflito_maquina(df_banco, maquina_alvo, dt_inicio_novo, dt_fim_no
     return conflitos
 
 def configurar_estilo_visual():
+   def configurar_estilo_visual():
     st.markdown("""
         <style>
-        section[data-testid="stSidebar"] { background-color: #ffffff; border-right: 3px solid #FFD700; }
-        section[data-testid="stSidebar"] * { color: #000000 !important; }
+        /* 1. CORREÇÃO DA BARRA LATERAL (TEMA ESCURO) */
+        section[data-testid="stSidebar"] { background-color: #262730 !important; border-right: 3px solid #FFD700; }
+        section[data-testid="stSidebar"] * { color: #FAFAFA !important; }
+
+        /* 2. ESTILOS GERAIS DE BOTÕES E MÉTRICAS */
         div.stButton > button { background-color: #FFD700 !important; color: #000000 !important; border: 2px solid #000000 !important; font-weight: bold !important; }
         div.stButton > button:hover { background-color: #FFEA00 !important; border-color: #333333 !important; }
+        button[kind="secondary"] { background-color: #ff4b4b !important; color: white !important; }
+        
         div[data-testid="stMetric"] { background-color: #111111 !important; border: 1px solid #FFD700 !important; padding: 10px; border-radius: 5px; color: white !important; }
         div[data-testid="stMetricLabel"] { color: #FFD700 !important; }
         div[data-testid="stMetricValue"] { color: #ffffff !important; }
         h1, h2, h3 { color: #FFD700 !important; }
-        button[kind="secondary"] { background-color: #ff4b4b !important; color: white !important; }
-        
-        /* OCULTAR A BOLINHA DO RADIO BUTTON E CRIAR BOTÕES LIMPOS */
-        div[role="radiogroup"] > label > div:first-of-type { 
-            display: none !important; 
-        }
+
+        /* 3. CORREÇÃO DO MENU DE NAVEGAÇÃO */
         div[role="radiogroup"] label { 
             padding: 10px 15px; 
             border-radius: 5px; 
@@ -355,12 +357,12 @@ def configurar_estilo_visual():
             background-color: #FFD700 !important; 
             border-color: #000000 !important; 
         }
-        div[role="radiogroup"] label[data-checked="true"] p { 
+        div[role="radiogroup"] label[data-checked="true"] * { 
             color: #000000 !important; 
             font-weight: bold; 
         }
         div[role="radiogroup"] label:hover { 
-            background-color: #f0f2f6; 
+            background-color: #333333 !important; 
         }
         </style>
     """, unsafe_allow_html=True)
