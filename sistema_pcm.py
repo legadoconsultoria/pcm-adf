@@ -1,4 +1,22 @@
 import streamlit as st
+st.markdown("""
+    <style>
+        /* Mantém o fundo escuro */
+        [data-testid="stSidebar"] {
+            background-color: #262730 !important;
+        }
+        
+        /* O asterisco força QUALQUER elemento dentro da navegação a ficar branco */
+        [data-testid="stSidebarNav"] * {
+            color: #FAFAFA !important;
+        }
+        
+        /* Força a cor branca em todos os links clicáveis da barra lateral */
+        [data-testid="stSidebar"] a {
+            color: #FAFAFA !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
 import pandas as pd
 import plotly.express as px
 import base64
