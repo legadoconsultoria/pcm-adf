@@ -3,3 +3,4 @@ pandas
 plotly
 supabase
 requests
+starlette<1.4.0
